@@ -2,12 +2,12 @@
 `timescale 1ns/1ns
 module debounce #(
     parameter HIST_LEN = 8
-)(
+    )(
     input wire clk,
     input wire reset,
     input wire button,
     output reg debounced
-);
+     );
     localparam on_value = 2 ** HIST_LEN - 1;
     reg [HIST_LEN-1:0] button_hist;
 
